@@ -2,6 +2,7 @@ services:
   - type: web
     name: urja-85-app
     env: node
+    plan: free
     region: singapore # or ohio, frankfurt, oregon
     rootDir: urja-85-app
     buildCommand: npm install && npm run build
