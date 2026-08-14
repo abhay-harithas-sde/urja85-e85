@@ -1,11 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Leaf, Navigation, Map as MapIcon, Zap, Sprout, BarChart3, ShieldCheck, ChevronRight, CheckCircle2 } from "lucide-react";
 
 export default function Home() {
-  const staggerContainer = {
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -15,17 +15,17 @@ export default function Home() {
     }
   };
 
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
-  const fadeRight = {
+  const fadeRight: Variants = {
     hidden: { opacity: 0, x: -50 },
     show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
-  const scaleUp = {
+  const scaleUp: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     show: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
   };
@@ -284,7 +284,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold tracking-tight text-white">Urja<span className="text-urja-saffron">-85</span></h2>
             </div>
             <p className="text-slate-400 max-w-md mb-8">
-              A comprehensive tech ecosystem accelerating India's transition to Flex-Fuel. Built with Next.js, Supabase, and Google Gemini AI.
+              A comprehensive tech ecosystem accelerating India's transition to Flex-Fuel. Build with Vitality for Drive.
             </p>
           </div>
           
