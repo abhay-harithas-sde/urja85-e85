@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Leaf, ArrowLeft, Workflow, Bot, Webhook, Zap } from "lucide-react";
+import { Leaf, ArrowLeft, Sprout, Truck, Factory, Bot, Webhook, Cpu } from "lucide-react";
 
 export default function Integrations() {
   return (
@@ -18,66 +18,109 @@ export default function Integrations() {
         </Link>
         
         <div className="flex items-center gap-4 mb-6">
-          <Workflow className="h-10 w-10 text-urja-green" />
-          <h1 className="text-4xl font-bold">Automation Integrations</h1>
+          <Cpu className="h-10 w-10 text-urja-green" />
+          <h1 className="text-4xl font-bold">Role-Specific AI Integrations</h1>
         </div>
         
         <p className="text-slate-400 mb-12 text-lg">
-          The Urja-85 platform is powered by a robust stack of third-party AI agents and workflow automation tools. Here is exactly how we orchestrate the E85 flex-fuel ecosystem behind the scenes.
+          The Urja-85 platform utilizes a robust stack of third-party AI agents and workflow automation tools tailored for each of our primary users.
         </p>
 
         <div className="space-y-8">
-          <section className="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <Webhook className="h-8 w-8 text-orange-500" />
-              <h2 className="text-2xl font-bold">n8n (Workflow Automation)</h2>
+          {/* Farmers Section */}
+          <section className="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+              <Sprout className="w-32 h-32 text-urja-green" />
             </div>
-            <p className="text-slate-300 leading-relaxed mb-6">
-              n8n acts as the central nervous system of Urja-85, connecting our Supabase database to external communication channels and AI models without writing boilerplate code.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <h4 className="font-bold text-white mb-2">Kisan Connect Notifications</h4>
-                <p className="text-sm text-slate-400">When a biomass contract is finalized, an n8n webhook triggers automatically to send a localized WhatsApp message to the farmer detailing the pickup time and OMC payment details.</p>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-6">
+                <Sprout className="h-8 w-8 text-urja-green" />
+                <h2 className="text-2xl font-bold">1. Annadatas (Farmers)</h2>
               </div>
-              <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <h4 className="font-bold text-white mb-2">Supply Chain Alerts</h4>
-                <p className="text-sm text-slate-400">If the Strategic Reserve Predictor detects a potential E85 shortage, n8n orchestrates an alert pipeline to regional OMC managers via Slack and Email.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <Bot className="h-8 w-8 text-blue-400" />
-              <h2 className="text-2xl font-bold">Google Gemini AI</h2>
-            </div>
-            <p className="text-slate-300 leading-relaxed mb-6">
-              Gemini is our core reasoning engine, providing advanced language processing and computer vision capabilities.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <h4 className="font-bold text-white mb-2">Prakriti AI Chatbot</h4>
-                <p className="text-sm text-slate-400">Powered by the `gemini-1.5-flash` model, Prakriti AI uses context-aware prompting to educate citizens on the benefits of flex-fuels in multiple regional languages.</p>
-              </div>
-              <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                <h4 className="font-bold text-white mb-2">AI RC Scanner</h4>
-                <p className="text-sm text-slate-400">We utilize Gemini's advanced multimodal Vision API to instantly scan and extract data from uploaded Vehicle Registration Certificates (RCs) to determine E85 compatibility.</p>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                Automating the first mile of the ethanol supply chain—converting agricultural waste into raw feedstock.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Webhook className="w-5 h-5 text-orange-500" />
+                    <h4 className="font-bold text-white">n8n + WhatsApp</h4>
+                  </div>
+                  <p className="text-sm text-slate-400">When an AI matches a farmer's biomass with a buyer, an **n8n webhook** instantly triggers a localized WhatsApp message containing the smart contract, pickup time, and payment details.</p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Bot className="w-5 h-5 text-blue-400" />
+                    <h4 className="font-bold text-white">Satellite AI</h4>
+                  </div>
+                  <p className="text-sm text-slate-400">Machine learning models process satellite imagery of the farmer's registered land plot to automatically estimate the exact tonnage and moisture content of the stubble before harvesting.</p>
+                </div>
               </div>
             </div>
           </section>
 
-          <section className="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <Zap className="h-8 w-8 text-purple-400" />
-              <h2 className="text-2xl font-bold">Make & LangChain</h2>
+          {/* Fleets Section */}
+          <section className="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+              <Truck className="w-32 h-32 text-urja-saffron" />
             </div>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              We leverage **LangChain** in our backend to give our Gemini AI access to external tools (like checking live OMC database inventories). 
-            </p>
-            <p className="text-slate-300 leading-relaxed">
-              **Make (formerly Integromat)** is utilized for our CRM data syncing, ensuring that every new fleet operator registration is automatically pipelined into our marketing and outreach databases for rapid onboarding.
-            </p>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-6">
+                <Truck className="h-8 w-8 text-urja-saffron" />
+                <h2 className="text-2xl font-bold">2. Fleet Operators</h2>
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                Automating logistics, route planning, and predictive engine maintenance for commercial E85 flex-fuel fleets.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Bot className="w-5 h-5 text-blue-400" />
+                    <h4 className="font-bold text-white">Gemini Vision AI</h4>
+                  </div>
+                  <p className="text-sm text-slate-400">Fleet mechanics upload photos of engine components. **Google Gemini's multimodal Vision API** natively analyzes the images to detect premature ethanol corrosion and schedule predictive maintenance.</p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Webhook className="w-5 h-5 text-purple-400" />
+                    <h4 className="font-bold text-white">Make.com CRM Sync</h4>
+                  </div>
+                  <p className="text-sm text-slate-400">Every new fleet operator registration is automatically pipelined via **Make (Integromat)** into our ESG tracking database to ensure accurate carbon credit calculation and reporting.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* OMCs Section */}
+          <section className="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+              <Factory className="w-32 h-32 text-blue-400" />
+            </div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-6">
+                <Factory className="h-8 w-8 text-blue-400" />
+                <h2 className="text-2xl font-bold">3. Oil Marketing Companies (OMCs)</h2>
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                Securing the national E85 supply chain through AI-driven demand forecasting and automated procurement.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Cpu className="w-5 h-5 text-green-400" />
+                    <h4 className="font-bold text-white">LangChain Scraping</h4>
+                  </div>
+                  <p className="text-sm text-slate-400">The Strategic Reserve Predictor utilizes **LangChain** to orchestrate real-time web scraping of weather APIs, agricultural databases, and OMC pump inventories to forecast supply dips.</p>
+                </div>
+                <div className="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Webhook className="w-5 h-5 text-orange-500" />
+                    <h4 className="font-bold text-white">n8n Escalation Alerts</h4>
+                  </div>
+                  <p className="text-sm text-slate-400">If LangChain detects an impending ethanol shortage in a specific region, an **n8n pipeline** automatically triggers escalation alerts to regional OMC managers via Slack and Email.</p>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </main>
