@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 hackathon_proposal.md
 reel_script.md
+prompt-template.md
+rewrite.js
+rewrite.py
