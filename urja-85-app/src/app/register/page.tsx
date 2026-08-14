@@ -74,6 +74,7 @@ export default function Register() {
             <input 
               type="text" 
               required
+              autoComplete="name"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               className="w-full bg-slate-800 border border-slate-700 rounded-md p-3 text-slate-50 focus:outline-none focus:border-urja-green transition-colors"
@@ -85,6 +86,7 @@ export default function Register() {
             <input 
               type="email" 
               required
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-slate-800 border border-slate-700 rounded-md p-3 text-slate-50 focus:outline-none focus:border-urja-green transition-colors"
@@ -96,6 +98,7 @@ export default function Register() {
             <input 
               type="password" 
               required
+              autoComplete="new-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full bg-slate-800 border border-slate-700 rounded-md p-3 text-slate-50 focus:outline-none focus:border-urja-green transition-colors"
