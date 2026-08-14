@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reel generation & test scripts
+create_users.ts
+generate_audio.ts
+generate_reel.ts
+voiceover.mp3
+Urja85_Final_Reel.mp4
